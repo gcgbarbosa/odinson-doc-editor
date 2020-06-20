@@ -1,22 +1,60 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+//import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
+import Paper from "@material-ui/core/Paper";
+import Typography from '@material-ui/core/Typography'
+import TextField from '@material-ui/core/TextField'
+import FormControl from '@material-ui/core/FormControl'
+
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+  <Grid container direction="column" justify="center" alignItems="center" spacing={4}>
+    <Grid item xs={12}>
+      <Paper>
+        <Box p={4} minWidth="90vw">
+          <Typography variant="h4" align="center" gutterBottom>
+            Odinson File Editor
+          </Typography>
+        </Box>
+      </Paper>
+    </Grid>
+    <Grid item xs={12}>
+      <Paper>
+        <Box p={4} minWidth="90vw">
+          <Typography variant="h5" align="center" gutterBottom>
+            Tag
+          </Typography>
+          
+        </Box>
+      </Paper>
+    </Grid>
+    <Grid item xs={12}>
+      <Paper>
+        <Box p={4} minWidth="90vw">
+          <FormControl fullWidth>
+            <TextField 
+              width={1}
+              multiline
+              rows={8}
+              defaultValue="json file"
+              variant="outlined"
+            />
+          </FormControl>
+        </Box>
+      </Paper>
+    </Grid>
+    <Grid item xs={12}>
+      <Paper>
+        <Box p={4} minWidth="90vw">
+          <Typography variant="h5" align="center" gutterBottom>
+            Form with individual items
+          </Typography>
+        </Box>
+      </Paper>
+    </Grid>
+  </Grid>
+);
 
-export default IndexPage
+export default IndexPage;
