@@ -8,6 +8,15 @@ import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import FormControl from '@material-ui/core/FormControl'
 
+import TAG from 'text-annotation-graphs'
+import OdinParser from 'text-annotation-graphs/Parsers/odin'
+//TAG.registerParser(new OdinParser(), "odin");
+
+//const basicTag = TAG.tag({
+//  container: "tag",
+//  data: require('./sentence-1-odin.json'), // how do I put the data here
+//  format: "odin"
+//})
 
 const IndexPage = () => (
   <Grid container direction="column" justify="center" alignItems="center" spacing={4}>
@@ -26,6 +35,8 @@ const IndexPage = () => (
           <Typography variant="h5" align="center" gutterBottom>
             Tag
           </Typography>
+          <div id="tag">
+          </div>
           
         </Box>
       </Paper>
