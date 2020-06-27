@@ -1,5 +1,9 @@
-import React from "react";
-//import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
+
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
 
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
@@ -8,15 +12,9 @@ import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import FormControl from '@material-ui/core/FormControl'
 
-import TAG from 'text-annotation-graphs'
-import OdinParser from 'text-annotation-graphs/Parsers/odin'
+import TAG from "text-annotation-graphs";
+//const OdinParser = require("text-annotation-graphs/Parsers/odin");
 //TAG.registerParser(new OdinParser(), "odin");
-
-//const basicTag = TAG.tag({
-//  container: "tag",
-//  data: require('./sentence-1-odin.json'), // how do I put the data here
-//  format: "odin"
-//})
 
 const IndexPage = () => (
   <Grid container direction="column" justify="center" alignItems="center" spacing={4}>
@@ -68,4 +66,4 @@ const IndexPage = () => (
   </Grid>
 );
 
-export default IndexPage;
+export default IndexPage
