@@ -17,13 +17,16 @@ class TextAreaJson extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   handleChange(event) {
     this.setState({jsonDocument: event.target.value})
   }
+
   handleSubmit(event) {
     this.props.onJsonDocumentChange(this.state.jsonDocument)
     event.preventDefault();
   }
+
   render() {
     return (
       <Box p={4} minWidth="90vw">
@@ -56,9 +59,11 @@ class TAGViz extends React.Component {
           <Box width={0.9}>
             <TAGComponent
               data={this.props.jsonDocument}
+              topTagCategory="chunk"
+              bottomTagCategory="POS"
+              bottomLinkCategory="graphs"
+              showTopMainLabel={true}
               showTopArgLabels={true}
-              compactRows={false}
-              linkSlotInterval={40}
             />
           </Box>
         </Box>
@@ -72,13 +77,15 @@ class App extends React.Component {
     super(props)
     this.state = {jsonFile: ''}
   }
+
   handleTextAreaJsonInput = (json) => {
     let json_obj = JSON.parse(json)
     this.setState({jsonFile: json_obj})
   }
+
   render() {
-    // onli render tag if this is set
     let tag;
+    // only render tag if this is set
     if (this.state.jsonFile) {
       tag = (
         <Grid item xs={12}>
