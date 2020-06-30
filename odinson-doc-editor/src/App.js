@@ -61,7 +61,7 @@ class TAGViz extends React.Component {
               data={this.props.jsonDocument}
               topTagCategory="chunk"
               bottomTagCategory="POS"
-              bottomLinkCategory="graphs"
+              bottomLinkCategory="universal-enhanced"
               showTopMainLabel={true}
               showTopArgLabels={true}
             />
