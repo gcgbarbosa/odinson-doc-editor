@@ -2,6 +2,10 @@
   "name": "odinson-doc-editor",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "^6.14.5",
+    "node": "^13.14.0"
+  },
   "dependencies": {
     "@lum-ai/react-tag": "^1.0.7",
     "@material-ui/core": "^4.10.2",
