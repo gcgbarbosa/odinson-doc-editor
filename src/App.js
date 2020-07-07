@@ -10,6 +10,8 @@ import Button from '@material-ui/core/Button'
 
 import {TAGComponent} from '@lum-ai/react-tag'
 
+import CustomParser from './odinson'
+
 class TextAreaJson extends React.Component {
   constructor(props) {
     super(props);
@@ -64,6 +66,8 @@ class TAGViz extends React.Component {
               bottomLinkCategory="universal-enhanced"
               showTopMainLabel={true}
               showTopArgLabels={true}
+              customParsers={[{ParserClass: CustomParser, name: 'custom'}]}
+              format="custom"
             />
           </Box>
         </Box>
